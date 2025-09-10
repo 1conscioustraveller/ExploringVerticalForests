@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Vertical Forests</title>
+    <!-- 1. Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 2. Load React, ReactDOM, and Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 3. Internal Styles for the grid background etc. -->
+    <style>
+        /* The LLM would generate CSS based on the gridOptions here */
+        .hero-grid {
+            background-size: 50px 50px;
+            background-image: linear-gradient(65deg, #4a4a4a 1px, transparent 1px),
+                              linear-gradient(155deg, #4a4a4a 1px, transparent 1px);
+            opacity: 0.4;
+        }
+        @media (prefers-color-scheme: dark) {
+            .hero-grid {
+                background-image: linear-gradient(65deg, #2a2a2a 1px, transparent 1px),
+                                  linear-gradient(155deg, #2a2a2a 1px, transparent 1px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-950">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // 4. The LLM would paste the provided HeroSectionDemo code here
+        const { HeroSection } = window; // Assuming the component is attached to window from a CDN, or the LLM might adapt it.
+
+        function HeroSectionDemo() {
+          return (
+            <HeroSection
+              title="Welcome to Our Platform"
+              subtitle={{
+                regular: "Transform your ideas into ",
+                gradient: "beautiful digital experiences",
+              }}
+              description="Transform your ideas into reality with our comprehensive suite of development tools and resources."
+              ctaText="Get Started"
+              ctaHref="/signup"
+              bottomImage={{
+                light: "https://www.launchuicomponents.com/app-light.png",
+                dark: "https://www.launchuicomponents.com/app-dark.png",
+              }}
+              gridOptions={{
+                angle: 65,
+                opacity: 0.4,
+                cellSize: 50,
+                lightLineColor: "#4a4a4a",
+                darkLineColor: "#2a2a2a",
+              }}
+            />
+          )
+        }
+
+        // 5. The LLM would add code to render the component and create the layout
+        function App() {
+            return (
+                <div>
+                    <header className="...">Navigation about Vertical Forests</header>
+                    <HeroSectionDemo />
+                    <main className="...">Content about Vertical Forests...</main>
+                    <footer className="...">Footer</footer>
+                </div>
+            );
+        }
+
+        // 6. Render the App to the DOM
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
