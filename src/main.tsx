@@ -1,10 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+// src/main.tsx
+import ReactDOM from 'react-dom/client';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+// Simple test - no imports, no strict mode
+const root = ReactDOM.createRoot(document.getElementById('root')!);
+root.render(<h1>Hello from main.tsx</h1>);
