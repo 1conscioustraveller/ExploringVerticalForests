@@ -1,4 +1,12 @@
-// src/App.tsx
+import { ParticleTextEffect } from "@/components/ui/particle-text-effect";
+
 export default function App() {
-  return <h1 style={{ color: 'white', background: 'red', padding: '20px' }}>Hello World! If you see this, React is working!</h1>;
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <h1 className="text-3xl font-display text-brand mb-6 drop-shadow-glow">
+        Particle Text Effect
+      </h1>
+      <ParticleTextEffect />
+    </div>
+  );
 }
