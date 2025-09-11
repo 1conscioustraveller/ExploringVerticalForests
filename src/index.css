@@ -1,1 +1,12 @@
-/* Empty for now - add global styles later as needed */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+body {
+  @apply bg-black text-white font-sans;
+}
+
+h1, h2, h3 {
+  @apply font-display text-brand;
+}
